@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Strait&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  background-color: wheat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: rgba(245, 222, 179, 0.898);
+  border-radius: 10px;
+  font-family: Strait;
+  font-size: 20px;
+}
+
+.menu-tasks a {
+  text-decoration: none;
+  color: rgb(42, 42, 42);
+
+}
+
+.menu-tasks a:hover {
+  text-decoration: underline;
+
+}

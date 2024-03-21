@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Strait&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --vandyke: #3F292B;
+  --cinereous: #A37B73;
+  --tan: #DBBEA1;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Strait', sans-serif;
+  font-size: 40px;
+}
+
+header {
+  background-color: var(--vandyke);
+  height: 20vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--tan);
+}
+
+.content-wrapper {
+  display: flex;
+  flex: 1;
+}
+
+nav {
+  background-color: var(--tan);
+  width: 20vw;
+  font-family: 'Strait', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--cinereous);
+}
+
+main {
+  background-color: var(--cinereous);
+  flex: 1;
+  font-family: 'Strait', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--vandyke);
+}
