@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Strait&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --vandyke: #3F292B;
+  --cinereous: #A37B73;
+  --tan: #DBBEA1;
+}
+
+body {
+  font-family: 'Strait', sans-serif;
+  min-height: 100vh;
+  background-image: url('/assets/img/fundoLogin.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+body::before {
+  /* como escolhi uma imagem de fundo cinza, 
+  a ideia aqui é usar uma das cores escolhidas 
+  do layout para compor o design
+  sobrepondo o fundo com transparencia */
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--cinereous);
+  opacity: 0.6;
+  z-index: -1;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  /* Fundo do container --tan com 60% de transparência */
+  background: rgba(219, 190, 161, 0.6);
+  border-radius: 30px;
+  /* Sombra --cinereous com blur */
+  box-shadow: 8px 8px 8px 0 rgba(163, 123, 115, .3);
+  /* Garantir que a .container fique acima do elemento de cor do fundo */
+  z-index: 1;
+
+}
+
+
+/* para que as duas divs tenham o mesmo tamanho */
+.login-section,
+.login-form {
+  flex: 1;
+  width: 50%;
+}
+
+.login-section {
+  background-image: url('/assets/img/imgLateralLogin.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  border-radius: 30px 0 0 30px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+}
+
+.header-text {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  margin-bottom: 60px;
+}
+
+.login-form h1 {
+  color: var(--vandyke);
+  font-size: 4rem;
+  margin-bottom: 5px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.login-form h3 {
+  color: var(--cinereous);
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+
+}
+
+.login-form p {
+  color: var(--vandyke);
+  /* Assume que você deseja usar a cor Vandyke aqui */
+}
+
+.login-form a {
+  color: var(--cinereous);
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.login-form a:hover,
+.login-form a:focus {
+  color: var(--vandyke);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  width: 80%;
+  margin-bottom: 30px;
+}
+
+input {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: 1px solid var(--cinereous);
+  background-color: var(--tan);
+  font-family: 'Strait', sans-serif;
+  color: var(--vandyke);
+  font-size: 1rem;
+  outline: none;
+}
+
+input[type="email"]::placeholder,
+input[type="password"]::placeholder {
+  color: var(--vandyke);
+  opacity: 1;
+}
+
+input:focus {
+  border-color: var(--vandyke);
+  box-shadow: 0 0 8px rgba(163, 123, 115, 0.5);
+}
+
+button {
+  width: 50%;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid var(--cinereous);
+  background-color: var(--tan);
+  font-family: 'Strait', sans-serif;
+  color: var(--vandyke);
+  font-size: 1rem;
+  cursor: pointer;
+  outline: none;
+  /* brinca com transições para efeitos no botão */
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+button:hover,
+focus {
+  /* Muda a cor de fundo quando o mouse está sobre o botão */
+  background-color: var(--cinereous);
+  /* Muda a cor do texto para contraste */
+  color: var(--tan);
+  /* Muda a cor da borda para um destaque sutil */
+  border-color: var(--vandyke);
+
+}
+
+
+
+.social-login {
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+  margin-top: 30px;
+}
+
+/* Botões lado a lado */
+.social-login button {
+  /* faz cada botão crescer igualmente */
+  flex: 1;
+  /* adiciona um pouco de espaço entre os botões */
+  margin: 0 10px;
+
+}
+
+.google,
+.facebook {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
